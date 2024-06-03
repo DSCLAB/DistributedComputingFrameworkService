@@ -1,0 +1,7 @@
+{
+    "rabbitmq_host": "rabbitmq",
+    "HDS": {
+        "host": "hbase-regionserver1",
+        "port": "8000"
+    }
+}

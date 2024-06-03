@@ -1,0 +1,404 @@
+2024-05-24 00:33:12,518 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T00:33:12.518221'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 00:33:12,534 - [INFO]
+{'took': 4, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 2, 'relation': 'eq'}, 'm2024-05-24 00:33:12,553 - [INFO]
+V8A8OI8BUEOaUejDXvqw
+[/dcfs-share/dcfs-run/detection_consumer.py callback 53]
+
+2024-05-24 00:33:12,553 - [INFO]
+curl --data-binary "@/dcfs-share/detection-task/V8A8OI8BUEOaUejDXvqw.txt" -L POST "http://hbase-regionserver1:8000/dataservice/v1/access?from=local%3A%2F%2F%2F&to=hds%3A%2F%2F%2Fdetection%2Ftask%2FV8A8OI8BUEOaUejDXvqw.txt"
+[/dcfs-share/dcfs-run/detection_consumer.py callback 63]
+
+2024-05-24 00:35:13,208 - [INFO]
+WMA9OI8BUEOaUejDbvqe
+[/dcfs-share/dcfs-run/detection_consumer.py callback 53]
+
+2024-05-24 00:35:13,209 - [INFO]
+curl --data-binary "@/dcfs-share/detection-task/WMA9OI8BUEOaUejDbvqe.txt" -L POST "http://hbase-regionserver1:8000/dataservice/v1/access?from=local%3A%2F%2F%2F&to=hds%3A%2F%2F%2Fdetection%2Ftask%2FWMA9OI8BUEOaUejDbvqe.txt"
+[/dcfs-share/dcfs-run/detection_consumer.py callback 63]
+
+2024-05-24 02:03:06,438 - [ERROR]
+Unexpected connection close detected: AMQPHeartbeatTimeout: ('No activity or too many missed heartbeats in the last 60 seconds',)
+[/usr/local/lib/python3.10/dist-packages/pika/adapters/blocking_connection.py _flush_output 521]
+
+: 94, 'Var': 7, 'DataType': 'num', 'Percentiles': [75.0, 76.8, 77.8, 82.9, 85.6, 86.5, 87.8, 89.6, 91.2, 92.2, 94.0]}, 'PkMin': 1}}}, {'_index': 'data_detection_task', '_id': 'V8A8OI8BUEOaUejDXvqw', '_score': 1.8938179, '_source': {'TaskInfo': {'TaskName': '0415_mssql_int+str', 'Ip': '192.168.103.174', 'Port': '3306', 'DbName': 'TestDB', 'DbType': 'mysql', 'UserName': 'yuyu', 'Password': 'tp6ej04m6', 'TableName': 'Score', 'IntColCheckList': ['Chinese', 'Science', 'Math'], 'StrColCheckList': ['item'], 'ExpectCount': 3, 'Intervals': 1, 'IntPkCol': None, 'TimestampCol': None, 'SuccessCount': 1, 'FailCount': 1, 'ExecutionCount': 2, 'Enable': True, 'StartTime': '2024-05-02T07:37:11.585077', 'NextTime': '2024-05-02T09:37:11.585077', 'TaskID': 'V8A8OI8BUEOaUejDXvqw', 'TaskSetUpTime': '2024-05-02T07:37:11.601905'}, 'InitialStat': {'item': {'CategorySet': ['Test 1'], 'DataType': 'category'}, 'Science': {'Mean': 84, 'Min': 70, 'Max': 92, 'Var': 6, 'DataType': 'num', 'Percentiles': [70.0, 78.1, 79.8, 81.4, 83.2, 84.5, 85.8, 87.3, 88.4, 90.2, 92.0]}, 'Chinese': {'Mean': 82, 'Min': 65, 'Max': 95, 'Var': 9, 'DataType': 'num', 'Percentiles': [65.0, 72.2, 75.4, 77.4, 81.6, 84.5, 86.2, 88.0, 88.4, 90.5, 95.0]}, 'Math': {'Mean': 85, 'Min': 75, 'Max': 94, 'Var': 7, 'DataType': 'num', 'Percentiles': [75.0, 76.8, 77.8, 82.9, 85.6, 86.5, 87.8, 89.6, 91.2, 92.2, 94.0]}}}}]}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 00:33:12,535 - [INFO]
+Pending tasks: [WMA9OI8BUEOaUejDbvqe, V8A8OI8BUEOaUejDXvqw]
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 00:33:12,552 - [INFO]
+{'_index': 'data_detection_task', '_id': 'WMA9OI8BUEOaUejDbvqe', '_version': 8, 'result': 'updated', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 784, '_primary_term': 8}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 92]
+
+2024-05-24 00:33:12,556 - [INFO]
+{'_index': 'data_detection_task', '_id': 'V8A8OI8BUEOaUejDXvqw', '_version': 8, 'result': 'updated', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 785, '_primary_term': 8}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 92]
+
+2024-05-24 00:40:12,904 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T00:40:12.904627'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 00:40:12,907 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 00:40:12,907 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 00:50:13,483 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T00:50:13.482988'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 00:50:13,494 - [INFO]
+{'took': 1, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 00:50:13,494 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:00:14,093 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:00:14.092274'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:00:14,103 - [INFO]
+{'took': 1, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:00:14,103 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:10:14,653 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:10:14.652762'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:10:14,664 - [INFO]
+{'took': 1, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:10:14,664 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:20:15,257 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:20:15.256706'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:20:15,265 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:20:15,265 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:30:15,849 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:30:15.848763'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:30:15,859 - [INFO]
+{'took': 1, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:30:15,860 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:40:16,483 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:40:16.464700'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:40:16,494 - [INFO]
+{'took': 1, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:40:16,495 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 01:50:17,096 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T01:50:17.093085'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 01:50:17,102 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 01:50:17,102 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:03:04,365 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:01:23.114120'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:03:06,252 - [INFO]
+{'took': 71, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:03:06,252 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:10:07,264 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:10:07.264602'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:10:07,318 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:10:07,318 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:20:07,908 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:20:07.908659'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:20:07,911 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:20:07,911 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:30:08,457 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:30:08.457427'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:30:08,510 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:30:08,510 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:40:09,049 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:40:09.049748'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:40:09,052 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:40:09,052 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:50:09,642 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:50:09.642535'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:50:09,695 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:50:09,695 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:00:10,228 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:00:10.228624'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:00:10,231 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:00:10,231 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:10:10,769 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:10:10.768902'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:10:10,822 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:10:10,822 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:20:11,368 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:20:11.368574'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:20:11,371 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:20:11,371 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:30:11,961 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:30:11.960622'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:30:12,014 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:30:12,015 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:40:12,564 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:40:12.564287'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:40:12,566 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:40:12,566 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:50:13,136 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:50:13.136643'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:50:13,189 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:50:13,189 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 04:00:13,696 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T04:00:13.696598'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 04:00:13,699 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 04:00:13,699 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+24 02:25:05,510 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:35:06,074 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:35:06.074629'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:35:06,077 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:35:06,077 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:45:06,643 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:45:06.643082'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:45:06,645 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:45:06,645 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 02:55:07,203 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T02:55:07.202697'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 02:55:07,205 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 02:55:07,205 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:05:07,789 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:05:07.789606'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:05:07,792 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:05:07,792 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:15:08,360 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:15:08.360612'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:15:08,363 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:15:08,363 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:25:08,922 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:25:08.922682'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:25:08,925 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:25:08,925 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:35:09,481 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:35:09.481101'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:35:09,483 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:35:09,483 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:45:10,030 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:45:10.030719'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:45:10,033 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:45:10,033 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+
+2024-05-24 03:55:10,560 - [INFO]
+{'query': {'bool': {'must': [{'range': {'TaskInfo.NextTime': {'lt': '2024-05-24T03:55:10.560616'}}}, {'term': {'TaskInfo.Enable': True}}]}}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 67]
+
+2024-05-24 03:55:10,562 - [INFO]
+{'took': 0, 'timed_out': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 0, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 71]
+
+2024-05-24 03:55:10,563 - [INFO]
+Pending tasks: []
+[/dcfs-share/dcfs-run/detection_trigger.py check_task_status 72]
+

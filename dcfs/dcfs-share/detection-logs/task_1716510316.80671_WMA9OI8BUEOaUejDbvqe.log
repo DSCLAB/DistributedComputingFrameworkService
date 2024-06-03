@@ -1,0 +1,104 @@
+2024-05-24 00:25:16,807 - [INFO]
+WMA9OI8BUEOaUejDbvqe
+[/dcfs-share/dcfs-run/detection.py <module> 50]
+
+2024-05-24 00:25:16,807 - [INFO]
+
+[/dcfs-share/dcfs-run/detection.py <module> 51]
+
+2024-05-24 00:25:16,807 - [INFO]
+Start doing detection task.
+[/dcfs-share/dcfs-run/detection.py <module> 54]
+
+2024-05-24 00:25:16,807 - [INFO]
+Connect to elasticsearch.
+[/dcfs-share/dcfs-run/detection.py <module> 55]
+
+2024-05-24 00:25:16,807 - [INFO]
+Connect finished.
+[/dcfs-share/dcfs-run/detection.py <module> 66]
+
+2024-05-24 00:25:16,807 - [INFO]
+Start gathering information about detection task.
+[/dcfs-share/dcfs-run/detection.py get_detection_task 79]
+
+2024-05-24 00:25:16,811 - [INFO]
+{'TaskInfo': {'TaskName': '0415_mssql_int+str', 'Ip': '192.168.103.174', 'Port': '3306', 'DbName': 'TestDB', 'DbType': 'mysql', 'UserName': 'yuyu', 'Password': 'tp6ej04m6', 'TableName': 'Score', 'IntColCheckList': ['Chinese', 'Science', 'Math'], 'StrColCheckList': [], 'IntPkCol': 'StudentId', 'ExpectCount': 3, 'Intervals': 1, 'PkMax': 10, 'TimestampCol': None, 'SuccessCount': 0, 'FailCount': 1, 'ExecutionCount': 1, 'Enable': True, 'StartTime': '2024-05-02T07:38:21.213400', 'NextTime': '2024-05-02T09:38:21.213400', 'TaskID': 'WMA9OI8BUEOaUejDbvqe', 'TaskSetUpTime': '2024-05-02T07:38:21.233524', 'db_url': 'mysql+pymysql://yuyu:tp6ej04m6@192.168.103.174:3306/TestDB'}, 'InitialStat': {'PkMax': 10, 'Science': {'Mean': 84, 'Min': 70, 'Max': 92, 'Var': 6, 'DataType': 'num', 'Percentiles': [70.0, 78.1, 79.8, 81.4, 83.2, 84.5, 85.8, 87.3, 88.4, 90.2, 92.0]}, 'Chinese': {'Mean': 82, 'Min': 65, 'Max': 95, 'Var': 9, 'DataType': 'num', 'Percentiles': [65.0, 72.2, 75.4, 77.4, 81.6, 84.5, 86.2, 88.0, 88.4, 90.5, 95.0]}, 'Math': {'Mean': 85, 'Min': 75, 'Max': 94, 'Var': 7, 'DataType': 'num', 'Percentiles': [75.0, 76.8, 77.8, 82.9, 85.6, 86.5, 87.8, 89.6, 91.2, 92.2, 94.0]}, 'PkMin': 1}}
+[/dcfs-share/dcfs-run/detection.py get_detection_task 95]
+
+2024-05-24 00:25:16,811 - [INFO]
+Check whether to calculate statistics or do detection.
+[/dcfs-share/dcfs-run/detection.py calculate_statistics_or_detection 99]
+
+2024-05-24 00:25:16,811 - [INFO]
+Calculate statistics.
+[/dcfs-share/dcfs-run/detection.py calculate_statistics_or_detection 101]
+
+2024-05-24 00:25:16,811 - [INFO]
+Check detection size.
+[/dcfs-share/dcfs-run/detection.py check_data_size 106]
+
+2024-05-24 00:25:16,821 - [INFO]
+SELECT count(*) AS row_count, max(StudentId) AS max_ind FROM Score WHERE StudentId > 10
+[/dcfs-share/dcfs-run/detection.py check_data_size 140]
+
+2024-05-24 00:25:16,860 - [INFO]
+   row_count  max_ind
+0         70       80
+[/dcfs-share/dcfs-run/detection.py check_data_size 143]
+
+2024-05-24 00:25:16,864 - [INFO]
+Task row count: 70
+[/dcfs-share/dcfs-run/detection.py check_data_size 147]
+
+2024-05-24 00:25:16,864 - [INFO]
+Task index range:: (11, 80)
+[/dcfs-share/dcfs-run/detection.py check_data_size 152]
+
+2024-05-24 00:25:16,864 - [INFO]
+Start getting sample data
+[/dcfs-share/dcfs-run/detection.py get_sample_data 159]
+
+2024-05-24 00:25:16,868 - [INFO]
+['Chinese', 'Science', 'StudentId', 'Math', 'item']
+[/dcfs-share/dcfs-run/detection.py get_sample_data 222]
+
+2024-05-24 00:25:16,868 - [INFO]
+   Chinese  Science  StudentId  Math    item
+0       64       82         11    75  Test 2
+1       77       68         12    85  Test 2
+2       88       91         13    94  Test 2
+[/dcfs-share/dcfs-run/detection.py get_sample_data 223]
+
+2024-05-24 00:25:16,874 - [INFO]
+Start executing detection task.
+[/dcfs-share/dcfs-run/detection.py detect_data_quality 327]
+
+2024-05-24 00:25:16,875 - [INFO]
+{'TaskID': 'WMA9OI8BUEOaUejDbvqe', 'TaskName': '0415_mssql_int+str', 'TaskStatus': True, 'Timestamp': '2024-05-24T00:25:16.875851', 'ValidationResult': True, 'Result': {'SampleNum': 70, 'Detail': {'Chinese': {'DataType': 'num', 'Mean': 80, 'Var': 10, 'Min': 56, 'Max': 95, 'Percentiles': [56.0, 65.0, 69.8, 74.7, 77.0, 79.5, 84.0, 87.0, 89.0, 91.1, 95.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}, 'Science': {'DataType': 'num', 'Mean': 84, 'Var': 9, 'Min': 67, 'Max': 100, 'Percentiles': [67.0, 70.0, 74.8, 78.7, 82.0, 85.0, 88.0, 90.0, 92.2, 95.1, 100.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}, 'Math': {'DataType': 'num', 'Mean': 83, 'Var': 9, 'Min': 65, 'Max': 99, 'Percentiles': [65.0, 70.9, 74.0, 77.0, 80.0, 85.0, 87.0, 89.3, 93.0, 95.0, 99.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}}, 'PkMin': 11, 'PkMax': 80}, 'ExecutionType': 'Auto'}
+[/dcfs-share/dcfs-run/detection.py detect_data_quality 477]
+
+2024-05-24 00:25:16,875 - [INFO]
+Start recording detection result.
+[/dcfs-share/dcfs-run/detection.py record_detection 481]
+
+2024-05-24 00:25:16,876 - [INFO]
+{'TaskID': 'WMA9OI8BUEOaUejDbvqe', 'TaskName': '0415_mssql_int+str', 'TaskStatus': True, 'Timestamp': '2024-05-24T00:25:16.876003', 'ValidationResult': True, 'Result': {'SampleNum': 70, 'Detail': {'Chinese': {'DataType': 'num', 'Mean': 80, 'Var': 10, 'Min': 56, 'Max': 95, 'Percentiles': [56.0, 65.0, 69.8, 74.7, 77.0, 79.5, 84.0, 87.0, 89.0, 91.1, 95.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}, 'Science': {'DataType': 'num', 'Mean': 84, 'Var': 9, 'Min': 67, 'Max': 100, 'Percentiles': [67.0, 70.0, 74.8, 78.7, 82.0, 85.0, 88.0, 90.0, 92.2, 95.1, 100.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}, 'Math': {'DataType': 'num', 'Mean': 83, 'Var': 9, 'Min': 65, 'Max': 99, 'Percentiles': [65.0, 70.9, 74.0, 77.0, 80.0, 85.0, 87.0, 89.3, 93.0, 95.0, 99.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}}, 'PkMin': 11, 'PkMax': 80}, 'ExecutionType': 'Auto'}
+[/dcfs-share/dcfs-run/detection.py record_detection 485]
+
+2024-05-24 00:25:16,876 - [INFO]
+{'doc': {'TaskInfo': {'PkMax': 80, 'ExecutionCount': 2, 'SuccessCount': 1}}}
+[/dcfs-share/dcfs-run/detection.py record_detection 512]
+
+2024-05-24 00:25:16,885 - [INFO]
+{'_index': 'data_detection_result', '_id': 'hrj8p48BGsMMX9qu2eBN', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 162, '_primary_term': 8}
+[/dcfs-share/dcfs-run/detection.py record_detection 515]
+
+2024-05-24 00:25:16,885 - [INFO]
+{'_index': 'data_detection_task', '_id': 'WMA9OI8BUEOaUejDbvqe', '_version': 7, 'result': 'updated', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 782, '_primary_term': 8}
+[/dcfs-share/dcfs-run/detection.py record_detection 516]
+
+2024-05-24 00:25:16,885 - [INFO]
+Detection task end.
+[/dcfs-share/dcfs-run/detection.py <module> 608]
+

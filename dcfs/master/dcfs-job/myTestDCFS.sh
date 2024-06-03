@@ -1,0 +1,1 @@
+/dcfs-job/dcfsJob single hds:///join/csv python3 /dcfs-share/dcfs-run/logTest.py dcfsInput --configpath /dcfs-job/dcfs-config.xml

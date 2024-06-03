@@ -1,0 +1,102 @@
+2024-05-02 07:40:26,474 - [INFO]
+DgatMY8BSmYLq_73KGHu
+[/dcfs-share/dcfs-run/detection.py <module> 50]
+
+2024-05-02 07:40:26,474 - [INFO]
+
+[/dcfs-share/dcfs-run/detection.py <module> 51]
+
+2024-05-02 07:40:26,474 - [INFO]
+Start doing detection task.
+[/dcfs-share/dcfs-run/detection.py <module> 54]
+
+2024-05-02 07:40:26,474 - [INFO]
+Connect to elasticsearch.
+[/dcfs-share/dcfs-run/detection.py <module> 55]
+
+2024-05-02 07:40:26,475 - [INFO]
+Connect finished.
+[/dcfs-share/dcfs-run/detection.py <module> 66]
+
+2024-05-02 07:40:26,475 - [INFO]
+Start gathering information about detection task.
+[/dcfs-share/dcfs-run/detection.py get_detection_task 79]
+
+2024-05-02 07:40:26,477 - [INFO]
+{'TaskInfo': {'TaskName': 'detection_0501', 'Ip': '192.168.103.174', 'Port': '3306', 'DbName': 'testdatabase', 'DbType': 'mysql', 'TableName': 'app_info', 'UserName': 'yuyu', 'Password': 'tp6ej04m6', 'IntColCheckList': ['num'], 'StrColCheckList': ['remark'], 'UserDefColCheckList': ['int_col'], 'UserDefColSetting': {'int_col': {'StatisticFuncName': 'static_func_a', 'StatisticFuncContent': 'from scipy.stats import moment\ndef static_func_a(input):\n\tsec_moment = moment(input,2)\n\tthird_moment = moment(input, 3)\n\treturn [sec_moment, third_moment]\n', 'DetectionFuncName': 'detect_func_a', 'DetectionFuncContent': 'from scipy.stats import moment\ndef detect_func_a(col_input, stat):\n\tthird = moment(col_input, 3)\n\tresult = (third - stat[1])/stat[1]\n\treturn [result<0.2, result]\n'}}, 'ExpectCount': 10, 'Intervals': 1, 'StartTime': '2024-05-01T09:00:00', 'IntPkCol': None, 'TimestampCol': None, 'SuccessCount': 10, 'FailCount': 0, 'ExecutionCount': 10, 'Enable': True, 'NextTime': '2024-05-01T21:00:00', 'TaskID': 'DgatMY8BSmYLq_73KGHu', 'TaskSetUpTime': '2024-05-01T01:03:02.897687', 'db_url': 'mysql+pymysql://yuyu:tp6ej04m6@192.168.103.174:3306/testdatabase'}, 'InitialStat': {'num': {'Mean': 751, 'Min': 222, 'Max': 999, 'Var': 257, 'DataType': 'num', 'Percentiles': [222.0, 377.4, 599.4, 666.0, 754.8, 777.0, 888.0, 932.4, 999.0, 999.0, 999.0]}, 'remark': {'CategorySet': ['Java Project Simple Example - Version 1.0.3', 'Java Unit Test Simple Example', 'Java Web Application Spring MVC - Simple Example （MyBatis）', 'Java Project Simple Example - Version 1.0.4', 'Java Unit Test Simple Example - Update 1.0.3', 'Java Web Application Spring MVC - Simple Example Update（MyBatis）', 'Simple Node.js Application Example', 'Simple React.js Application Example', 'Simple Vue.js Application Example', 'Simple Angular Application Example', 'Simple Python Script Example', 'Simple Flask Web Application Example', 'Python Web Application Django - Simple Example'], 'DataType': 'category'}}}
+[/dcfs-share/dcfs-run/detection.py get_detection_task 95]
+
+2024-05-02 07:40:26,478 - [INFO]
+Check whether to calculate statistics or do detection.
+[/dcfs-share/dcfs-run/detection.py calculate_statistics_or_detection 99]
+
+2024-05-02 07:40:26,478 - [INFO]
+Calculate statistics.
+[/dcfs-share/dcfs-run/detection.py calculate_statistics_or_detection 101]
+
+2024-05-02 07:40:26,478 - [INFO]
+Check detection size.
+[/dcfs-share/dcfs-run/detection.py check_data_size 106]
+
+2024-05-02 07:40:26,486 - [INFO]
+SELECT count(*) AS row_count FROM app_info
+[/dcfs-share/dcfs-run/detection.py check_data_size 140]
+
+2024-05-02 07:40:26,492 - [INFO]
+   row_count
+0         13
+[/dcfs-share/dcfs-run/detection.py check_data_size 143]
+
+2024-05-02 07:40:26,496 - [INFO]
+Task row count: 13
+[/dcfs-share/dcfs-run/detection.py check_data_size 147]
+
+2024-05-02 07:40:26,496 - [INFO]
+Start getting sample data
+[/dcfs-share/dcfs-run/detection.py get_sample_data 159]
+
+2024-05-02 07:40:26,500 - [INFO]
+['id', 'name', 'version', 'author', 'remark', 'num']
+[/dcfs-share/dcfs-run/detection.py get_sample_data 222]
+
+2024-05-02 07:40:26,500 - [INFO]
+   id  ...  num
+0   1  ...  888
+1   2  ...  666
+2   3  ...  777
+
+[3 rows x 6 columns]
+[/dcfs-share/dcfs-run/detection.py get_sample_data 223]
+
+2024-05-02 07:40:26,510 - [INFO]
+Start executing detection task.
+[/dcfs-share/dcfs-run/detection.py detect_data_quality 327]
+
+2024-05-02 07:40:26,510 - [INFO]
+{'TaskID': 'DgatMY8BSmYLq_73KGHu', 'TaskName': 'detection_0501', 'TaskStatus': True, 'Timestamp': '2024-05-02T07:40:26.510611', 'ValidationResult': True, 'Result': {'SampleNum': 13, 'Detail': {'remark': {'DataType': 'category', 'ValueOutOfSet': [], 'IsPass': True}, 'num': {'DataType': 'num', 'Mean': 751, 'Var': 257, 'Min': 222, 'Max': 999, 'Percentiles': [222.0, 377.4, 599.4, 666.0, 754.8, 777.0, 888.0, 932.4, 999.0, 999.0, 999.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}}}, 'ExecutionType': 'Auto'}
+[/dcfs-share/dcfs-run/detection.py detect_data_quality 477]
+
+2024-05-02 07:40:26,510 - [INFO]
+Start recording detection result.
+[/dcfs-share/dcfs-run/detection.py record_detection 481]
+
+2024-05-02 07:40:26,510 - [INFO]
+{'TaskID': 'DgatMY8BSmYLq_73KGHu', 'TaskName': 'detection_0501', 'TaskStatus': True, 'Timestamp': '2024-05-02T07:40:26.510739', 'ValidationResult': True, 'Result': {'SampleNum': 13, 'Detail': {'remark': {'DataType': 'category', 'ValueOutOfSet': [], 'IsPass': True}, 'num': {'DataType': 'num', 'Mean': 751, 'Var': 257, 'Min': 222, 'Max': 999, 'Percentiles': [222.0, 377.4, 599.4, 666.0, 754.8, 777.0, 888.0, 932.4, 999.0, 999.0, 999.0], 'ValueOutOf3var': [], 'ValueOutOf5var': [], 'IsPass': True}}}, 'ExecutionType': 'Auto'}
+[/dcfs-share/dcfs-run/detection.py record_detection 485]
+
+2024-05-02 07:40:26,510 - [INFO]
+{'doc': {'TaskInfo': {'ExecutionCount': 11, 'SuccessCount': 11, 'Enable': False}}}
+[/dcfs-share/dcfs-run/detection.py record_detection 512]
+
+2024-05-02 07:40:26,516 - [INFO]
+{'_index': 'data_detection_result', '_id': 'WsA_OI8BUEOaUejDWPoP', '_version': 1, 'result': 'created', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 158, '_primary_term': 7}
+[/dcfs-share/dcfs-run/detection.py record_detection 515]
+
+2024-05-02 07:40:26,516 - [INFO]
+{'_index': 'data_detection_task', '_id': 'DgatMY8BSmYLq_73KGHu', '_version': 26, 'result': 'updated', '_shards': {'total': 2, 'successful': 1, 'failed': 0}, '_seq_no': 777, '_primary_term': 7}
+[/dcfs-share/dcfs-run/detection.py record_detection 516]
+
+2024-05-02 07:40:26,516 - [INFO]
+Detection task end.
+[/dcfs-share/dcfs-run/detection.py <module> 608]
+
